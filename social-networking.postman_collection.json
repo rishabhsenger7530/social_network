@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "7c9ce834-4b65-4c68-86c1-501a6de95bdf",
+		"name": "social-networking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34161167"
+	},
+	"item": [
+		{
+			"name": "user-signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"r1@gmail.com\",\n    \"password\": \"@Aa8182027530\",\n    \"confirm_password\": \"@Aa8182027530\",\n    \"first_name\": \"rishabh\",\n     \"last_name\": \"sengar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/user-signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MDUyMTUxLCJpYXQiOjE3MDY4NzkzNTEsImp0aSI6IjYzZTZlZDQzYWY0OTQ4MmRhOGYyYjc0NzIxM2EzNzgwIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOm51bGx9.2arXID4jgBR70Z1Zb0qO_4vpYpN5Yl35bsAVWUZ6W98"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "r1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "@Aa8182027530",
+							"type": "text"
+						},
+						{
+							"key": "refresh",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwODE3NTM1MSwiaWF0IjoxNzA2ODc5MzUxLCJqdGkiOiI2MGFlMzM2OGU0MmM0NjI3YjM3NjY0N2ZhNTdlYWQ5YyIsInVzZXJfaWQiOjMsInVzZXJuYW1lIjpudWxsfQ.hEx-a9YdcZVnbXs6k1pMT2OT7jWetU7p6lUejUh2tFQ",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "accepted",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://localhost:8000/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "Search-users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0OTIyMjE0LCJpYXQiOjE3MjQ3NDk0MTQsImp0aSI6ImIyNjc1MmE0NWMwNTQyYWQ5ZjFhNzg3NTNlYzk1ZDhkIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOm51bGx9.BZ1FJnbbataynYkx_tukEgfKmAdIGiKtExPOC-tXM-g"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "r2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "@Aa8182027530",
+							"type": "text"
+						},
+						{
+							"key": "refresh",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwODE3NTM1MSwiaWF0IjoxNzA2ODc5MzUxLCJqdGkiOiI2MGFlMzM2OGU0MmM0NjI3YjM3NjY0N2ZhNTdlYWQ5YyIsInVzZXJfaWQiOjMsInVzZXJuYW1lIjpudWxsfQ.hEx-a9YdcZVnbXs6k1pMT2OT7jWetU7p6lUejUh2tFQ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "rejected",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://localhost:8000/search-users/"
+			},
+			"response": []
+		},
+		{
+			"name": "friend-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0OTIyMjE0LCJpYXQiOjE3MjQ3NDk0MTQsImp0aSI6ImIyNjc1MmE0NWMwNTQyYWQ5ZjFhNzg3NTNlYzk1ZDhkIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOm51bGx9.BZ1FJnbbataynYkx_tukEgfKmAdIGiKtExPOC-tXM-g"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password@123",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refresh",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwODE3NTM1MSwiaWF0IjoxNzA2ODc5MzUxLCJqdGkiOiI2MGFlMzM2OGU0MmM0NjI3YjM3NjY0N2ZhNTdlYWQ5YyIsInVzZXJfaWQiOjMsInVzZXJuYW1lIjpudWxsfQ.hEx-a9YdcZVnbXs6k1pMT2OT7jWetU7p6lUejUh2tFQ",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "rejected",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/friend-list"
+			},
+			"response": []
+		},
+		{
+			"name": "friend-request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0OTIyMjE0LCJpYXQiOjE3MjQ3NDk0MTQsImp0aSI6ImIyNjc1MmE0NWMwNTQyYWQ5ZjFhNzg3NTNlYzk1ZDhkIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOm51bGx9.BZ1FJnbbataynYkx_tukEgfKmAdIGiKtExPOC-tXM-g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"request_to\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/friend-request/"
+			},
+			"response": []
+		},
+		{
+			"name": "accpet and reject friend request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0OTIzMTM4LCJpYXQiOjE3MjQ3NTAzMzgsImp0aSI6ImI3OWRjNDM4NGFhZDRjY2Y4YzA5YTc4NWU3ZWNmMzdiIiwidXNlcl9pZCI6MywidXNlcm5hbWUiOm51bGx9.G2UJun40uaim7WI38-R6RAm2L6_bMNxp9BxhPG1hM8I"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"accepted\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/update-request/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "pending-request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/friend-request/"
+			},
+			"response": []
+		}
+	]
+}
