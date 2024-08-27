@@ -28,8 +28,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', ObtainTokenPairView.as_view(), name='token_obtain_pair'),
     path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('register/', RegisterView.as_view(), name='auth_register'),
+    path('user-signup/', RegisterView.as_view(), name='auth_register'),
     path('', include('accounts.urls')),
     path('', include('friends.urls')),
 
 ]
+# @Aa8182027530
