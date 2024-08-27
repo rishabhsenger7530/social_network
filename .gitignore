@@ -1,0 +1,25 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific files
+db.sqlite3
+*.log
+
+# Environment variables
+.env
+
+# Virtual environments
+venv/
+env/
+
+# Ignore migrations
+**/migrations/
+
+# MySQL/SQLite database dumps
+*.sqlite3
+
+# Ignore IDE specific files
+.vscode/
+.idea/
